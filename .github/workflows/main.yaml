@@ -26,10 +26,10 @@ jobs:
          key: Library
      
      #Run Tests
-     - name: Run Tests
-       uses: webbertakken/unity-test-runner@v1.3
-       with:
-         unityVersion: 2019.4.14f1
+     #- name: Run Tests
+     #  uses: webbertakken/unity-test-runner@v1.3
+     #  with:
+     #    unityVersion: 2019.4.14f1
      
      #Build
      - name: Build
@@ -43,3 +43,8 @@ jobs:
        with:
          name: Build
          path: build
+
+     #Return License
+     - name: Return License
+       uses: webbertakken/unity-return-license@v1
+       if: always()
